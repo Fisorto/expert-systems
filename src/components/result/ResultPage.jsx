@@ -1,6 +1,25 @@
 import './ResultPage.scss';
 
 
+class Dogs{
+  constructor(options){
+      this.id = options.id;
+      this.number = options.number;
+      this.name = options.name;
+      this.img = options.img;
+
+      this.size = options.size;
+      this.character = options.character;
+      this.mind = options.mind;
+      this.goal = options.goal;
+      this.enegretic = options.enegretic;
+
+
+  }
+}
+
+/* this.tail = options.tail;
+      this.ears = options.ears; */
 
 function ResultPage() {
     return (
