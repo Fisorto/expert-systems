@@ -9,7 +9,7 @@ function HomePage() {
             <div className="greeting-area">
                 <div className="greeting-text">
                     <h1>
-                        Ласкаво просимо до застосунку вибора породи собаки.
+                        Ласкаво просимо до застосунку вибору породи собаки.
                     </h1>
                 </div>
                 <div className="greeting-propose-text">

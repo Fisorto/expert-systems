@@ -2,13 +2,12 @@ import { Link } from 'react-router-dom';
 import './pages-styles/PagesStyles.scss';
 
 
-
-function FirstPage() {
+function FourthPage() {
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>Тут повинно бути питання 1</h2></div>
+                <div className="question-area"><h2>Тут повинно бути питання 4</h2></div>
                 <div className="answer-area">
                     <input id="a1" name="first_question" type="radio" value="1"/>
                     <label for="a1">Відповідь 1</label>
@@ -25,12 +24,12 @@ function FirstPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/">
+                        <Link to="/third">
                             <button>Назад</button>
                         </Link>
                     </div>
                     <div className="button-button">
-                        <Link to="/second">
+                        <Link to="/fifth">
                             <button>Вперед</button>
                         </Link>
                     </div>
@@ -41,4 +40,4 @@ function FirstPage() {
     );
   }
   
-  export default FirstPage;
+  export default FourthPage;
