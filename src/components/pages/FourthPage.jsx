@@ -1,20 +1,65 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import './pages-styles/PagesStyles.scss';
 
+import { codeForDogs } from './FirstPage';
+
+
+const trainingAnswerArray = [
+    {   
+        id : "a4",
+        code: "a",
+        value: "Базові навичики дресурування"      
+    },
+    {   
+        id : "b4",
+        code: "b",
+        value: "Базові навички та додаткові часи дресурування"      
+    },
+    {
+        id : "c4",
+        code: "c",
+        value: "Порода для якої потрібно багато часу для дресурування"      
+    },
+]
 
 function FourthPage() {
+    const [id, setId] = useState('');
+    
+    function idChanger(i){
+        if(id.length < 1){
+            setId(id + i)
+        } else {
+            setId(i)
+        }   
+    }
+
+    function setAnswer(anwer){
+        codeForDogs.training = anwer;
+        console.log(codeForDogs)
+        
+    };
+
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>Тут повинно бути питання 4</h2></div>
+                <div className="question-area">
+                    <h2>
+                        4.Cкільки ви плануєте дрессерувати собаку ?
+                    </h2>
+                </div>
                 <div className="answer-area">
-                    <input id="a1" name="first_question" type="radio" value="1"/>
-                    <label for="a1">Відповідь 1</label>
-                    <input id="b1" name="first_question" type="radio" value="2"/>
-                    <label for="b1">Відповідь 2</label>
-                    <input id="c1" name="first_question" type="radio" value="3"/>
-                    <label for="c1">Відповідь 3</label>
+                {trainingAnswerArray.map((prop)=>{
+                        return(
+                        <div key={prop.id}>
+                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label >{prop.value}</label>
+                        </div>
+                        );
+                    }
+                    )}
                 </div>
 
                 <div className="button-area">
@@ -24,11 +69,11 @@ function FourthPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/third">
+                        <Link to="/third" onClick={()=>setAnswer("")}>
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button">
+                    <div className="button-button" onClick={()=>setAnswer(id)}>
                         <Link to="/fifth">
                             <button>Вперед</button>
                         </Link>
@@ -41,3 +86,4 @@ function FourthPage() {
   }
   
   export default FourthPage;
+  

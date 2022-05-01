@@ -18,6 +18,10 @@ import ResultPage from "./components/result/ResultPage"
 
 import './App.scss';
 
+
+
+
+
 function App() {
   return (
     <>
@@ -25,7 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
 
-          <Route path="/first" element={<FirstPage/>}/>
+          <Route path="/first" element={<FirstPage />}/>
           <Route path="/second" element={<SecondPage/>}/>
           <Route path="/third" element={<ThirdPage/>}/>
           <Route path="/fourth" element={<FourthPage/>}/>

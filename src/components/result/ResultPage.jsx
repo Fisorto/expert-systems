@@ -1,7 +1,8 @@
 import './ResultPage.scss';
 
 
-class Dogs{
+
+/* class Dogs{
   constructor(options){
       this.id = options.id;
       this.number = options.number;
@@ -13,13 +14,36 @@ class Dogs{
       this.mind = options.mind;
       this.goal = options.goal;
       this.enegretic = options.enegretic;
+      this.tail = options.tail;
+      this.ears = options.ears;
+
+      this.yourHome = options.yourHome;
+      this.alergic = options.alergic;
+      this.child = options.child;
+      this.otherAnimal = options.otherAnimal;
 
 
   }
-}
+} */
 
-/* this.tail = options.tail;
-      this.ears = options.ears; */
+/* const testDog = new Dogs({
+  id:1,
+  number:1,
+  name:'Sharik',
+  img:'The link to image',
+  size:'Big',
+  character:'Lazy',
+  mind:'fool',
+  goal:'toy',
+  energetic:'Yes',
+  tail:'Yes',
+  ears:'normal',
+  yourHome:'house',
+  alergic:'no',
+  child:'no',
+  otherAnimal:'no'
+}); */
+      
 
 function ResultPage() {
     return (

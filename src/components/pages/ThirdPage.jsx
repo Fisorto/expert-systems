@@ -1,20 +1,63 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import './pages-styles/PagesStyles.scss';
+
+import { codeForDogs } from './FirstPage';
+
+
+const experienceAnswerArray = [
+    {   
+        id : "a3",
+        code: "a",
+        value: "Ні, це моя перша собака"      
+    },
+    {   
+        id : "b3",
+        code: "b",
+        value: "В мене є досвід долгяду за собакою"      
+    },
+    {
+        id : "c3",
+        code: "c",
+        value: "В мене великий досвід догляду за собакою"      
+    },
+]
 
 
 function ThirdPage() {
+
+    const [id, setId] = useState('');
+    function idChanger(i){
+        if(id.length < 1){
+            setId(id + i)
+        } else {
+            setId(i)
+        }   
+    }
+
+    function setAnswer(anwer){
+        codeForDogs.experience = anwer;
+        console.log(codeForDogs)
+        
+    };
+
+
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>Тут повинно бути питання 3</h2></div>
+                <div className="question-area"><h2>3.Чи є у вас досвід догляду за собакою ?</h2></div>
                 <div className="answer-area">
-                    <input id="a1" name="first_question" type="radio" value="1"/>
-                    <label for="a1">Відповідь 1</label>
-                    <input id="b1" name="first_question" type="radio" value="2"/>
-                    <label for="b1">Відповідь 2</label>
-                    <input id="c1" name="first_question" type="radio" value="3"/>
-                    <label for="c1">Відповідь 3</label>
+                    {experienceAnswerArray.map((prop)=>{
+                        return(
+                        <div key={prop.id}>
+                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label >{prop.value}</label>
+                        </div>
+                        );
+                    }
+                    )}
                 </div>
 
                 <div className="button-area">
@@ -24,11 +67,11 @@ function ThirdPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/second">
+                        <Link to="/second" onClick={()=>setAnswer("")} >
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button">
+                    <div className="button-button" onClick={()=>setAnswer(id)} >
                         <Link to="/fourth">
                             <button>Вперед</button>
                         </Link>

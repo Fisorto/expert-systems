@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import './pages-styles/PagesStyles.scss';
 
 
+
+
 function TenthPage() {
     return (
       <section className='home-section'>
@@ -10,11 +12,11 @@ function TenthPage() {
                 <div className="question-area"><h2>Тут повинно бути питання 10</h2></div>
                 <div className="answer-area">
                     <input id="a1" name="first_question" type="radio" value="1"/>
-                    <label for="a1">Відповідь 1</label>
+                    <label for ="a1">Відповідь 1</label>
                     <input id="b1" name="first_question" type="radio" value="2"/>
-                    <label for="b1">Відповідь 2</label>
+                    <label for ="b1">Відповідь 2</label>
                     <input id="c1" name="first_question" type="radio" value="3"/>
-                    <label for="c1">Відповідь 3</label>
+                    <label for ="c1">Відповідь 3</label>
                 </div>
 
                 <div className="button-area">
@@ -24,7 +26,7 @@ function TenthPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/ninth">
+                        <Link to="/ninth" >
                             <button>Назад</button>
                         </Link>
                     </div>
