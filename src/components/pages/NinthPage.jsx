@@ -1,20 +1,56 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import './pages-styles/PagesStyles.scss';
+
+import { codeForDogs } from './FirstPage';
+
+const yourHomeAnswerArray = [
+    {   
+        id : "a9",
+        code: "a",
+        value: "Дім"      
+    },
+    {   
+        id : "b9",
+        code: "b",
+        value: "Квартира"      
+    },
+]
 
 
 function NinthPage() {
+    const [id, setId] = useState('');
+    
+    function idChanger(i){
+        if(id.length < 1){
+            setId(id + i)
+        } else {
+            setId(i)
+        }   
+    }
+
+    function setAnswer(anwer){
+        codeForDogs.yourHome = anwer;
+        console.log(codeForDogs)
+        
+    };
+
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>Тут повинно бути питання 9</h2></div>
+                <div className="question-area"><h2>9.Де ви живете?</h2></div>
                 <div className="answer-area">
-                    <input id="a1" name="first_question" type="radio" value="1"/>
-                    <label for="a1">Відповідь 1</label>
-                    <input id="b1" name="first_question" type="radio" value="2"/>
-                    <label for="b1">Відповідь 2</label>
-                    <input id="c1" name="first_question" type="radio" value="3"/>
-                    <label for="c1">Відповідь 3</label>
+                    {yourHomeAnswerArray.map((prop)=>{
+                        return(
+                        <div key={prop.id}>
+                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label >{prop.value}</label>
+                        </div>
+                        );
+                    }
+                    )}
                 </div>
 
                 <div className="button-area">
@@ -24,12 +60,12 @@ function NinthPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/eighth">
+                        <Link to="/eighth" onClick={()=>setAnswer("")}>
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button">
-                        <Link to="/tenth">
+                    <div className="button-button" >
+                        <Link to="/tenth" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
                         </Link>
                     </div>

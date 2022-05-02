@@ -13,6 +13,8 @@ import SeventhPage from "./components/pages/SeventhPage"
 import EighthPage from "./components/pages/EighthPage"
 import NinthPage from "./components/pages/NinthPage"
 import TenthPage from "./components/pages/TenthPage"
+import EleventhPage from "./components/pages/EleventhPage"
+import TwelfthPage from "./components/pages/TwelfthPage"
 
 import ResultPage from "./components/result/ResultPage"
 
@@ -39,6 +41,8 @@ function App() {
           <Route path="/eighth" element={<EighthPage/>}/>
           <Route path="/ninth" element={<NinthPage/>}/>
           <Route path="/tenth" element={<TenthPage/>}/>
+          <Route path="/eleventh" element={<EleventhPage/>}/>
+          <Route path="/twelfth" element={<TwelfthPage/>}/>
 
           <Route path="/result" element={<ResultPage/>}/>
 

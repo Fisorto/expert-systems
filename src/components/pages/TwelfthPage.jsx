@@ -5,27 +5,21 @@ import './pages-styles/PagesStyles.scss';
 
 import { codeForDogs } from './FirstPage';
 
-const activityAnswerArray = [
+const otherAnimalAnswerArray = [
     {   
-        id : "a6",
+        id : "a9",
         code: "a",
-        value: "Неспішні"      
+        value: "Так"      
     },
     {   
-        id : "b6",
+        id : "b9",
         code: "b",
-        value: "Середньої інтенсивності"      
-    },
-    {
-        id : "c6",
-        code: "c",
-        value: "Активні"      
+        value: "Ні"      
     },
 ]
 
 
-function SixthPage() {
-
+function TwelfthPage() {
     const [id, setId] = useState('');
     
     function idChanger(i){
@@ -37,18 +31,18 @@ function SixthPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.activity = anwer;
+        codeForDogs.otherAnimal = anwer;
         console.log(codeForDogs)
         
     };
-    
+
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>6.На скільки активні прогулянки ви хочете? </h2></div>
+                <div className="question-area"><h2>12.Чи повинна собака лагодити із іншими тваринами ?</h2></div>
                 <div className="answer-area">
-                {activityAnswerArray.map((prop)=>{
+                    {otherAnimalAnswerArray.map((prop)=>{
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
@@ -66,12 +60,12 @@ function SixthPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/fifth" onClick={()=>setAnswer("")}>
+                        <Link to="/ninth" onClick={()=>setAnswer("")}>
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button">
-                        <Link to="/seventh" onClick={()=>setAnswer(id)}>
+                    <div className="button-button" >
+                        <Link to="/result" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
                         </Link>
                     </div>
@@ -82,4 +76,4 @@ function SixthPage() {
     );
   }
   
-  export default SixthPage;
+  export default TwelfthPage;

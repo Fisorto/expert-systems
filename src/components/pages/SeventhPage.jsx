@@ -1,20 +1,66 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
 import './pages-styles/PagesStyles.scss';
+
+import { codeForDogs } from './FirstPage';
+
+const woolAnswerArray = [
+    {   
+        id : "a7",
+        code: "a",
+        value: "Без шерсті"      
+    },
+    {   
+        id : "b7",
+        code: "b",
+        value: "Коротка"      
+    },
+    {
+        id : "c7",
+        code: "c",
+        value: "Довга"      
+    },
+    {
+        id : "d7",
+        code: "c",
+        value: "Кучерява"      
+    },
+]
 
 
 function SeventhPage() {
+    const [id, setId] = useState('');
+    
+    function idChanger(i){
+        if(id.length < 1){
+            setId(id + i)
+        } else {
+            setId(i)
+        }   
+    }
+
+    function setAnswer(anwer){
+        codeForDogs.wool = anwer;
+        console.log(codeForDogs)
+        
+    };
+
     return (
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>Тут повинно бути питання 7</h2></div>
+                <div className="question-area"><h2>7.Яка шерсть повинна бути у собаки?</h2></div>
                 <div className="answer-area">
-                    <input id="a1" name="first_question" type="radio" value="1"/>
-                    <label for="a1">Відповідь 1</label>
-                    <input id="b1" name="first_question" type="radio" value="2"/>
-                    <label for="b1">Відповідь 2</label>
-                    <input id="c1" name="first_question" type="radio" value="3"/>
-                    <label for="c1">Відповідь 3</label>
+                    {woolAnswerArray.map((prop)=>{
+                        return(
+                        <div key={prop.id}>
+                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label >{prop.value}</label>
+                        </div>
+                        );
+                    }
+                    )}
                 </div>
 
                 <div className="button-area">
@@ -24,12 +70,12 @@ function SeventhPage() {
                         </a>
                     </div>
                     <div className="button-button">
-                        <Link to="/sixth">
+                        <Link to="/sixth" onClick={()=>setAnswer("")}>
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button">
-                        <Link to="/eighth">
+                    <div className="button-button" >
+                        <Link to="/eighth" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
                         </Link>
                     </div>
