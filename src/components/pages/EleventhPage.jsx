@@ -5,7 +5,7 @@ import './pages-styles/PagesStyles.scss';
 
 import { codeForDogs } from './FirstPage';
 
-const childAnswerArray = [
+const otherAnimalAnswerArray = [
     {   
         id : "a9",
         code: "a",
@@ -19,7 +19,7 @@ const childAnswerArray = [
 ]
 
 
-function EleventhPage() {
+function TwelfthPage() {
     const [id, setId] = useState('');
     
     function idChanger(i){
@@ -31,7 +31,7 @@ function EleventhPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.child = anwer;
+        codeForDogs.otherAnimal = anwer;
         console.log(codeForDogs)
         
     };
@@ -40,9 +40,9 @@ function EleventhPage() {
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>11.Чи повинна собака ладити із дітьми ?</h2></div>
+                <div className="question-area"><h2>11.Чи повинна собака ладити із іншими тваринами ?</h2></div>
                 <div className="answer-area">
-                    {childAnswerArray.map((prop)=>{
+                    {otherAnimalAnswerArray.map((prop)=>{
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
@@ -65,7 +65,7 @@ function EleventhPage() {
                         </Link>
                     </div>
                     <div className="button-button" >
-                        <Link to="/twelfth" onClick={()=>setAnswer(id)}>
+                        <Link to="/result" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
                         </Link>
                     </div>
@@ -76,4 +76,4 @@ function EleventhPage() {
     );
   }
   
-  export default EleventhPage;
+  export default TwelfthPage;

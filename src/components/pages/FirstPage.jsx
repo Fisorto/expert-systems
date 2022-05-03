@@ -31,7 +31,6 @@ export const codeForDogs = {
     activity : "",
     wool :"",
     loud : "",
-    yourHome : "",
     alergic : "",
     child : "",
     otherAnimal : "",

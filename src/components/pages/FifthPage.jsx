@@ -23,7 +23,7 @@ const goalAnswerArray = [
     },
     {
         id : "d5",
-        code: "c",
+        code: "d",
         value: "Просто як домашня тварина"      
     },
 ]

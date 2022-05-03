@@ -5,21 +5,21 @@ import './pages-styles/PagesStyles.scss';
 
 import { codeForDogs } from './FirstPage';
 
-const yourHomeAnswerArray = [
+const alergicAnswerArray = [
     {   
         id : "a9",
         code: "a",
-        value: "Дім"      
+        value: "Так"      
     },
     {   
         id : "b9",
         code: "b",
-        value: "Квартира"      
+        value: "Ні"      
     },
 ]
 
 
-function NinthPage() {
+function TenthPage() {
     const [id, setId] = useState('');
     
     function idChanger(i){
@@ -31,7 +31,7 @@ function NinthPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.yourHome = anwer;
+        codeForDogs.alergic = anwer;
         console.log(codeForDogs)
         
     };
@@ -40,9 +40,9 @@ function NinthPage() {
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>9.Де ви живете?</h2></div>
+                <div className="question-area"><h2>9.Чи є у вас алегрія на собак ?</h2></div>
                 <div className="answer-area">
-                    {yourHomeAnswerArray.map((prop)=>{
+                    {alergicAnswerArray.map((prop)=>{
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
@@ -76,4 +76,4 @@ function NinthPage() {
     );
   }
   
-  export default NinthPage;
+  export default TenthPage;

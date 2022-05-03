@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './pages-styles/PagesStyles.scss';
 
 import { codeForDogs } from './FirstPage';
-const loudAnswerArray = [
+const volumeAnswerArray = [
     {   
         id : "a8",
         code: "a",
@@ -34,7 +34,7 @@ function EighthPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.loud = anwer;
+        codeForDogs.volume = anwer;
         console.log(codeForDogs)
         
     };
@@ -43,9 +43,9 @@ function EighthPage() {
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>8.Якою гуною повинна бути собака</h2></div>
+                <div className="question-area"><h2>8.Якою гучною повинна бути собака</h2></div>
                 <div className="answer-area">
-                    {loudAnswerArray.map((prop)=>{
+                    {volumeAnswerArray.map((prop)=>{
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
