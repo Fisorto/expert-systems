@@ -16,14 +16,19 @@ const woolAnswerArray = [
         code: "b",
         value: "Коротка"      
     },
-    {
+    {   
         id : "c7",
         code: "c",
-        value: "Довга"      
+        value: "Cередня"      
     },
     {
         id : "d7",
-        code: "c",
+        code: "d",
+        value: "Довга"      
+    },
+    {
+        id : "e7",
+        code: "e",
         value: "Кучерява"      
     },
 ]

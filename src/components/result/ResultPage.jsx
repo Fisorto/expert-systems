@@ -13,13 +13,18 @@ const arrayOfSelectedDogs = [];
     for(let prop in arrayOfDogs[i]){
       if(arrayOfDogs[i][prop] === codeForDogs[prop]){
         indexOfTrue++;
+        console.log(arrayOfDogs[i])
+        console.log("YES")
+      } else {
+        console.log("NO")
       }
       
     }
     if (indexOfTrue === 11){
       arrayOfSelectedDogs.push(arrayOfDogs[i]);
+      console.log(arrayOfSelectedDogs)
     }
-   
+    console.log(indexOfTrue);
   } 
 
     return (

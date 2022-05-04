@@ -18,9 +18,8 @@ const haveTraining = "b";
 const aLotOFTraining = "c";
 //Ціль
 const securityGoal = "a";
-const showtyGoal = "b";
-const blindGoal = "c";
-const justADogGoal = "d";
+const blindGoal = "b";
+const justADogGoal = "c";
 //Прогулянки
 const unhurriedActivity = "a";
 const mediumIntensityActivity = "b";
@@ -30,13 +29,11 @@ const withoutWoll = "a";
 const shortWoll = "b";
 const mediumWoll = "c";
 const longWoll = "d";
+const curlyWoll = "e";
 //Гучність
 const quietVolume = "a";
 const mediumVolume = "b";
 const loudVolume = "c";
-//Дім
-const housHome = "a";
-const flatHome = "b";
 //Алергія
 const yesAlegric = "a";
 const noAlegric = "b";
@@ -70,7 +67,7 @@ class Dogs{
     }
   } 
   
-  /* const sampleDog = new Dogs(
+  /* const sampleDog = new Dogs({
     size:,
     time :,
     experience:,
@@ -78,8 +75,7 @@ class Dogs{
     goal:,
     activity :,
     wool:,
-    loud:,
-    yourHome:,
+    volume:,
     alergic:,
     child:,
     otherAnimal:,
@@ -129,6 +125,129 @@ class Dogs{
     name: 'Мопс',
     img: '',
   });
-  const arrayOfDogs = [pug];
+
+  const cockerSpaniel = new Dogs({
+    size: mediumSize,
+    time : thourTime,
+    experience: noExperience,
+    training: haveTraining,
+    goal: justADogGoal,
+    activity : intensiveActivity,
+    wool: mediumWoll,
+    volume: mediumVolume,
+    alergic: noAlegric,
+    child: yesChild,
+    otherAnimal: noAnimal,
+  
+    id:2,
+    number:2,
+    name:'Кокер-спаніель',
+    img:'',
+  });
+
+  const siberianHusky = new Dogs({
+      size: bigSize,
+      time : hourThourTime,
+      experience: haveExperience,
+      training: aLotOFTraining,
+      goal: securityGoal,
+      activity : intensiveActivity,
+      wool: longWoll,
+      volume: mediumVolume,
+      alergic: noAlegric,
+      child: noChild,
+      otherAnimal: noAnimal,
+    
+      id: 3,
+      number: 3,
+      name:'Сибірський Хаскі',
+      img:'',
+    });
+
+
+  const mexicanHairless = new Dogs({
+    size: mediumSize,
+    time : hourTime,
+    experience: haveExperience,
+    training: haveTraining,
+    goal: justADogGoal,
+    activity : unhurriedActivity,
+    wool: withoutWoll,
+    volume: quietVolume,
+    alergic: yesAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id: 4,
+    number: 4,
+    name:'Мексиканська лиса собака',
+    img:'',
+  }); 
+  const rottweiler = new Dogs({
+    size: bigSize,
+    time : hourThourTime,
+    experience: aLotOFExperience,
+    training: aLotOFTraining,
+    goal: securityGoal,
+    activity : mediumIntensityActivity,
+    wool: shortWoll,
+    volume: loudVolume,
+    alergic: noAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id:5,
+    number:5,
+    name:'Ротвейлер',
+    img:'',
+  });
+
+  const dachshund = new Dogs({
+    size: smallSize,
+    time : hourTime,
+    experience: noExperience,
+    training: haveTraining ,
+    goal: justADogGoal,
+    activity : unhurriedActivity,
+    wool: shortWoll,
+    volume: loudVolume ,
+    alergic: noAlegric,
+    child: noChild ,
+    otherAnimal: noAnimal,
+  
+    id: 6,
+    number: 6,
+    name:' Такса',
+    img:'',
+  });
+
+  const labrador = new Dogs({
+    size: bigSize,
+    time : thourTime,
+    experience: noExperience,
+    training: noTraining,
+    goal: blindGoal,
+    activity :intensiveActivity,
+    wool: shortWoll,
+    volume: mediumVolume ,
+    alergic: noAlegric,
+    child: yesChild ,
+    otherAnimal: yesAnimal,
+  
+    id: 7,
+    number: 7,
+    name:' Лабрадор',
+    img:'',
+  });
+  
+  const arrayOfDogs = [
+    pug,
+    cockerSpaniel, 
+    siberianHusky,
+    mexicanHairless,
+    rottweiler,
+    dachshund,
+    labrador, 
+   ];
 
   export default arrayOfDogs;

@@ -11,19 +11,14 @@ const goalAnswerArray = [
         code: "a",
         value: "Для охорони"      
     },
-    {   
+    {
         id : "b5",
         code: "b",
-        value: "Для виставок"      
+        value: "Для людини з вадами зору"      
     },
     {
         id : "c5",
         code: "c",
-        value: "Для людини з вадами зору"      
-    },
-    {
-        id : "d5",
-        code: "d",
         value: "Просто як домашня тварина"      
     },
 ]
