@@ -69,11 +69,11 @@ class Dogs{
   
   /* const sampleDog = new Dogs({
     size:,
-    time :,
+    time:,
     experience:,
     training:,
     goal:,
-    activity :,
+    activity:,
     wool:,
     volume:,
     alergic:,
@@ -109,16 +109,16 @@ class Dogs{
   const pug = new Dogs({
   
     size: smallSize,
-    time : fewTime,
+    time: fewTime,
     experience: noExperience,
     training: noTraining,
     goal: justADogGoal,
-    activity : unhurriedActivity,
+    activity: unhurriedActivity,
     wool: shortWoll,
     volume: quietVolume,
     alergic: noAlegric,
-    child: yesChild,
-    otherAnimal: yesAnimal,
+    child: [yesChild,noChild],
+    otherAnimal: [yesAnimal,noAnimal],
   
     id: 1,
     number: 1,
@@ -136,7 +136,7 @@ class Dogs{
     wool: mediumWoll,
     volume: mediumVolume,
     alergic: noAlegric,
-    child: yesChild,
+    child: [yesChild,noChild],
     otherAnimal: noAnimal,
   
     id:2,
@@ -150,7 +150,7 @@ class Dogs{
       time : hourThourTime,
       experience: haveExperience,
       training: aLotOFTraining,
-      goal: securityGoal,
+      goal: [securityGoal, justADogGoal],
       activity : intensiveActivity,
       wool: longWoll,
       volume: mediumVolume,
@@ -162,8 +162,7 @@ class Dogs{
       number: 3,
       name:'Сибірський Хаскі',
       img:'',
-    });
-
+  });
 
   const mexicanHairless = new Dogs({
     size: mediumSize,
@@ -174,7 +173,7 @@ class Dogs{
     activity : unhurriedActivity,
     wool: withoutWoll,
     volume: quietVolume,
-    alergic: yesAlegric,
+    alergic: [yesAlegric, noAlegric],
     child: noChild,
     otherAnimal: noAnimal,
   
@@ -188,7 +187,7 @@ class Dogs{
     time : hourThourTime,
     experience: aLotOFExperience,
     training: aLotOFTraining,
-    goal: securityGoal,
+    goal: [securityGoal, justADogGoal],
     activity : mediumIntensityActivity,
     wool: shortWoll,
     volume: loudVolume,
@@ -226,19 +225,115 @@ class Dogs{
     time : thourTime,
     experience: noExperience,
     training: noTraining,
-    goal: blindGoal,
+    goal: [justADogGoal,blindGoal],
     activity :intensiveActivity,
     wool: shortWoll,
     volume: mediumVolume ,
     alergic: noAlegric,
-    child: yesChild ,
-    otherAnimal: yesAnimal,
+    child: [yesChild,yesChild],
+    otherAnimal: [yesAnimal,noAnimal],
   
     id: 7,
     number: 7,
     name:' Лабрадор',
     img:'',
   });
+
+  const frenchBulldog = new Dogs({
+    size: smallSize,
+    time: fewTime,
+    experience: noExperience,
+    training: noTraining,
+    goal: justADogGoal,
+    activity: unhurriedActivity,
+    wool: shortWoll,
+    volume: quietVolume,
+    alergic: noAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id:8,
+    number:8,
+    name:'Французький бульдог',
+    img:'',
+  });
+
+  const dalmatian = new Dogs({
+    size: bigSize,
+    time: thourTime,
+    experience: aLotOFExperience,
+    training: haveTraining,
+    goal: justADogGoal,
+    activity: intensiveActivity,
+    wool: shortWoll,
+    volume: mediumVolume,
+    alergic: noAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id:9,
+    number:9,
+    name:'Далматинець',
+    img:'',
+  });
+  
+  const roughCollie= new Dogs({
+    size: bigSize,
+    time: hourThourTime,
+    experience: aLotOFExperience,
+    training: haveTraining,
+    goal: [securityGoal, justADogGoal],
+    activity: intensiveActivity,
+    wool: longWoll,
+    volume: mediumVolume,
+    alergic: noAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id:10,
+    number:10,
+    name:'Довгошерстий коллі',
+    img:'',
+  });
+
+  const chowChow= new Dogs({
+    size: bigSize,
+    time: hourTime,
+    experience: aLotOFExperience,
+    training: aLotOFTraining,
+    goal: [securityGoal, justADogGoal],
+    activity: mediumIntensityActivity,
+    wool: longWoll,
+    volume: quietVolume,
+    alergic: noAlegric,
+    child: noChild,
+    otherAnimal: noAnimal,
+  
+    id:11,
+    number:11,
+    name:'Чау-чау',
+    img:'',
+  });
+
+  const bretonSpaniel = new Dogs({
+    size: mediumSize,
+    time: thourTime,
+    experience: aLotOFExperience,
+    training: aLotOFTraining,
+    goal: justADogGoal,
+    activity: intensiveActivity,
+    wool: mediumWoll,
+    volume: mediumVolume,
+    alergic: noAlegric,
+    child: [yesChild,noChild],
+    otherAnimal: noAnimal,
+  
+    id: 12,
+    number: 12,
+    name:'Бретонський Епаньоль',
+    img:'',
+  });
+
   
   const arrayOfDogs = [
     pug,
@@ -247,7 +342,13 @@ class Dogs{
     mexicanHairless,
     rottweiler,
     dachshund,
-    labrador, 
+    labrador,
+    frenchBulldog,
+    dalmatian,
+    roughCollie,
+    chowChow,
+    bretonSpaniel,
+
    ];
 
   export default arrayOfDogs;
