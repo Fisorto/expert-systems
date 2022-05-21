@@ -1,7 +1,6 @@
 import './ResultPage.scss';
-import arrayOfDogs from './DogArchive'
-
-import { codeForDogs } from '../pages/FirstPage';
+import arrayOfDogs from '../base-knowledge/DogArchive'
+import {codeForDogs} from '../base-knowledge/DogArchive'
 
 
 

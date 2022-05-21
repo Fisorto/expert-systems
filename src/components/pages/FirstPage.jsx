@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {codeForDogs} from '../base-knowledge/DogArchive'
 import './pages-styles/PagesStyles.scss';
 
 
@@ -22,19 +23,7 @@ const sizeAnswerArray = [
     },
 ]
 
-export const codeForDogs = {
-    size :"",
-    time :"",
-    experience :"",
-    training : "",
-    goal : "",
-    activity : "",
-    wool :"",
-    loud : "",
-    alergic : "",
-    child : "",
-    otherAnimal : "",
-}
+
 
 
 

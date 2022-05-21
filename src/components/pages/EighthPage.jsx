@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 import './pages-styles/PagesStyles.scss';
 
-import { codeForDogs } from './FirstPage';
+import {codeForDogs} from '../base-knowledge/DogArchive'
+
 const volumeAnswerArray = [
     {   
         id : "a8",
@@ -34,7 +35,7 @@ function EighthPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.volume = anwer;
+        codeForDogs.loud = anwer;
         console.log(codeForDogs)
         
     };

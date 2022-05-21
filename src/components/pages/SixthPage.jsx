@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import './pages-styles/PagesStyles.scss';
 
-import { codeForDogs } from './FirstPage';
+import {codeForDogs} from '../base-knowledge/DogArchive'
 
 const activityAnswerArray = [
     {   

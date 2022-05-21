@@ -44,6 +44,20 @@ const noChild = "b";
 const yesAnimal = "a";
 const noAnimal = "b";
 
+export const codeForDogs = {
+  size :"",
+  time :"",
+  experience :"",
+  training : "",
+  goal : "",
+  activity : "",
+  wool :"",
+  loud : "",
+  alergic : "",
+  child : "",
+  otherAnimal : "",
+}
+
 class Dogs{
     constructor(options){
         this.size = options.size;
