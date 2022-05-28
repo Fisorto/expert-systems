@@ -26,11 +26,13 @@ const experienceAnswerArray = [
 
 
 function ThirdPage() {
-
     const [id, setId] = useState('');
+    const [flag, setFlag] = useState(false)
+    
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -72,9 +74,9 @@ function ThirdPage() {
                         </Link>
                     </div>
                     <div className="button-button" onClick={()=>setAnswer(id)} >
-                        <Link to="/fourth">
+                    {flag ? <Link to="/fourth">
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 

@@ -25,10 +25,12 @@ const volumeAnswerArray = [
 
 function EighthPage() {
     const [id, setId] = useState('');
+    const [flag, setFlag] = useState(false)
     
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -68,9 +70,9 @@ function EighthPage() {
                         </Link>
                     </div>
                     <div className="button-button" >
-                        <Link to="/ninth" onClick={()=>setAnswer(id)}>
+                    {flag ? <Link to="/ninth" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 

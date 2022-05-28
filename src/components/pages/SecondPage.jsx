@@ -30,12 +30,13 @@ const timeAnswerArray = [
 ]
 
 function SecondPage() {
-
     const [id, setId] = useState('');
+    const [flag, setFlag] = useState(false)
     
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -80,9 +81,9 @@ function SecondPage() {
                         </Link>
                     </div>
                     <div className="button-button">
-                        <Link to="/third" onClick={()=>setAnswer(id)} >
+                    {flag ? <Link to="/third" onClick={()=>setAnswer(id)} >
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 

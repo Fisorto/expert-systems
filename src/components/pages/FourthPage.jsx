@@ -26,10 +26,12 @@ const trainingAnswerArray = [
 
 function FourthPage() {
     const [id, setId] = useState('');
+    const [flag, setFlag] = useState(false)
     
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -73,10 +75,10 @@ function FourthPage() {
                             <button>Назад</button>
                         </Link>
                     </div>
-                    <div className="button-button" onClick={()=>setAnswer(id)}>
-                        <Link to="/fifth">
+                    <div className="button-button" >
+                    {flag ? <Link to="/fifth" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 

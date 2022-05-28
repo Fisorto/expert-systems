@@ -36,10 +36,12 @@ const woolAnswerArray = [
 
 function SeventhPage() {
     const [id, setId] = useState('');
-    
+    const [flag, setFlag] = useState(false)
+
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -80,9 +82,9 @@ function SeventhPage() {
                         </Link>
                     </div>
                     <div className="button-button" >
-                        <Link to="/eighth" onClick={()=>setAnswer(id)}>
+                    {flag ?<Link to="/eighth" onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 
