@@ -27,10 +27,12 @@ const activityAnswerArray = [
 function SixthPage() {
 
     const [id, setId] = useState('');
+    const [flag, setFlag] = useState(false)
     
     function idChanger(i){
         if(id.length < 1){
             setId(id + i)
+            setFlag(true)
         } else {
             setId(i)
         }   
@@ -52,7 +54,7 @@ function SixthPage() {
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
-                            <label >{prop.value}</label>
+                            <label htmlFor={prop.id}>{prop.value}</label>
                         </div>
                         );
                     }
@@ -71,9 +73,9 @@ function SixthPage() {
                         </Link>
                     </div>
                     <div className="button-button">
-                        <Link to="/seventh" onClick={()=>setAnswer(id)}>
+                        {flag ? <Link to="/seventh"  onClick={()=>setAnswer(id)}>
                             <button>Вперед</button>
-                        </Link>
+                        </Link> : null}
                     </div>
                 </div>
                 

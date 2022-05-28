@@ -61,7 +61,7 @@ function SeventhPage() {
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
-                            <label >{prop.value}</label>
+                            <label htmlFor={prop.id}>{prop.value}</label>
                         </div>
                         );
                     }
