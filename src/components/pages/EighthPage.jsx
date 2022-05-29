@@ -37,7 +37,7 @@ function EighthPage() {
     }
 
     function setAnswer(anwer){
-        codeForDogs.loud = anwer;
+        codeForDogs.volume = anwer;
         console.log(codeForDogs)
         
     };

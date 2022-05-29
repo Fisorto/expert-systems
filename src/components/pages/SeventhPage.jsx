@@ -26,11 +26,11 @@ const woolAnswerArray = [
         code: "d",
         value: "Довга"      
     },
-    {
+    /* {
         id : "e7",
         code: "e",
         value: "Кучерява"      
-    },
+    }, */
 ]
 
 
