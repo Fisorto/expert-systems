@@ -49,7 +49,7 @@ function SeventhPage() {
 
     function setAnswer(anwer){
         codeForDogs.wool = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

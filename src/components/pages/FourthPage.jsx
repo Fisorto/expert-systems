@@ -39,7 +39,7 @@ function FourthPage() {
 
     function setAnswer(anwer){
         codeForDogs.training = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

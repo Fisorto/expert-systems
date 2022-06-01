@@ -38,7 +38,7 @@ function FifthPage() {
 
     function setAnswer(anwer){
         codeForDogs.goal = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
     return (

@@ -34,7 +34,7 @@ function TenthPage() {
 
     function setAnswer(anwer){
         codeForDogs.alergic = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

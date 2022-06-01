@@ -40,7 +40,7 @@ function ThirdPage() {
 
     function setAnswer(anwer){
         codeForDogs.experience = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

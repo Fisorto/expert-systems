@@ -34,7 +34,7 @@ function TwelfthPage() {
 
     function setAnswer(anwer){
         codeForDogs.otherAnimal = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

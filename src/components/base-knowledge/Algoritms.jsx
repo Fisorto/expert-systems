@@ -1,6 +1,6 @@
 import {codeForDogs} from './DogArchive'
 import arrayOfDogs from './DogArchive'
-import arrayOfStingProperties from './DogArchive';
+
 
 
 
@@ -34,9 +34,11 @@ function theFidingDogs() {
       for (let prop in dog){
         
         if (prop !== "id" && prop !== "number" && prop !== "name" && prop !== "img"){
-          /* console.log(arrayOfStingProperties[0]) */
+          // console.log(arrayOfStingProperties[0][prop])
+          // console.log(prop)
           if(dog[prop] === "a"){
             propertiesOfDog.push(properties[points][0])
+            console.log(properties[points])
           } else if (dog[prop] === "b"){
             propertiesOfDog.push(properties[points][1])
           } else if (dog[prop] === "c"){

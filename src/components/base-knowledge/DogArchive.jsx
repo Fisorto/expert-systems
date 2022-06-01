@@ -100,7 +100,7 @@ class Dogs{
     img:'',
   }); */
   
-  /* const testDog = new Dogs({
+  const testDog = new Dogs({
   
     size:"a",
     experience:"a",
@@ -118,7 +118,7 @@ class Dogs{
     number:1,
     name:'Sharik',
     img:'',
-  }); */
+  });
   const pug = new Dogs({
   
     size: smallSize,
@@ -243,7 +243,7 @@ class Dogs{
     wool: shortWoll,
     volume: mediumVolume ,
     alergic: noAlegric,
-    child: [yesChild,yesChild],
+    child: [yesChild,noChild],
     otherAnimal: [yesAnimal,noAnimal],
   
     id: 7,
@@ -346,7 +346,7 @@ class Dogs{
     name:'Бретонський Епаньоль',
     img:'',
   });
-const arraySize = ["Маленька","Середня","Велика"]
+  const arraySize = ["Маленька","Середня","Велика"]
   const arrayTime = ["Півгодини на день", "Година на день", "Від години до двох годинь на день","Більше двох годин на день"]
   const arrayExperience = ["Ні, це моя перша собака", "В мене є досвід долгяду за собакою","В мене великий досвід догляду за собакою"]
   const arrayTraining = ["Базові навичики дресирування","Базові навички та додаткові часи дресирування", "Порода для якої потрібно багато часу для дресирування"]
@@ -370,9 +370,9 @@ const arraySize = ["Маленька","Середня","Велика"]
     arrayAlergic,
     arrayChild,
     arrayOtherAnimal,
-   ]
+   ];
   
-  const arrayOfDogs = [
+   export const arrayOfDogs = [
     pug,
     cockerSpaniel, 
     siberianHusky,
@@ -385,7 +385,7 @@ const arraySize = ["Маленька","Середня","Велика"]
     roughCollie,
     chowChow,
     bretonSpaniel,
-
+    testDog
    ];
 
   export default arrayOfDogs;

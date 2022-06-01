@@ -1,7 +1,7 @@
 import './ResultPage.scss';
 import theFidingDogs from "../base-knowledge/Algoritms"
 import {recodingDogs} from "../base-knowledge/Algoritms"
-import arrayOfStingProperties from '../base-knowledge//DogArchive';
+import {arrayOfStingProperties} from '../base-knowledge//DogArchive';
 
 
 
@@ -10,7 +10,6 @@ import arrayOfStingProperties from '../base-knowledge//DogArchive';
 
 function ResultPage() {
 const [arrayOfPerfectSelectedDogs, arrayOfExelentSelectedDogs, arrayOfGoodSelectedDogs] = theFidingDogs();
-
     return (
       <section className='home-section'>
             <div className="result-page">
@@ -18,11 +17,21 @@ const [arrayOfPerfectSelectedDogs, arrayOfExelentSelectedDogs, arrayOfGoodSelect
                 <h2>Ваш результат, це ось такий песик:</h2>
                 <div  >Ідеальні собаки:{
                   arrayOfPerfectSelectedDogs.map((comp)=>{
-                    return (<div key={comp.id}> {comp.name} </div >) 
+                    return (<div key={comp.id}> <details>
+                      <summary>{comp.name}</summary>
+                        {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
+                          return(<div>{value}</div>
+                        )})}
+                    </details> </div >) 
                   })}</div >
                   <div  >Майже ідеальні собаки:{
                   arrayOfExelentSelectedDogs.map((comp)=>{
-                    return (<div  key={comp.id}> {comp.name} </div >) 
+                    return (<div  key={comp.id}> <details>
+                      <summary>{comp.name}</summary>
+                        {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
+                          return(<div>{value}</div>
+                        )})}
+                    </details> </div >) 
                   })}</div >
                   <div  >Собаки які можливо підійдуть:{
                   arrayOfGoodSelectedDogs.map((comp)=>{
@@ -31,7 +40,9 @@ const [arrayOfPerfectSelectedDogs, arrayOfExelentSelectedDogs, arrayOfGoodSelect
                     <div>
                       <details>
                         <summary>{comp.name}</summary>
-                        {recodingDogs(comp, arrayOfStingProperties)}
+                          {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
+                            return(<div>{value}</div>
+                          )})}
                       </details>
                     </div> 
                     </div>) 
