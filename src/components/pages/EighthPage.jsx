@@ -46,7 +46,7 @@ function EighthPage() {
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>8.Якою гучною повинна бути собака</h2></div>
+                <div className="question-area"><h2>8. Наскільки гучною повинна бути собака</h2></div>
                 <div className="answer-area">
                     {volumeAnswerArray.map((prop)=>{
                         return(

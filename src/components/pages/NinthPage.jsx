@@ -42,7 +42,7 @@ function TenthPage() {
       <section className='home-section'>
             <div className="total-area">
 
-                <div className="question-area"><h2>9.Чи є у вас алегрія на собак ?</h2></div>
+                <div className="question-area"><h2>9.Чи є у вас алергія на собак ?</h2></div>
                 <div className="answer-area">
                     {alergicAnswerArray.map((prop)=>{
                         return(

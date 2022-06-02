@@ -47,7 +47,7 @@ function FifthPage() {
 
                 <div className="question-area">
                     <h2>
-                        5.Для яких цілей, ви хочите собаку ?
+                        5.Для яких цілей, ви хочете собаку ?
                     </h2>
                 </div>
                 <div className="answer-area">

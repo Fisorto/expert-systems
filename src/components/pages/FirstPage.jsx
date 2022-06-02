@@ -53,7 +53,7 @@ function FirstPage() {
 
                 <div className="question-area">
                     <h2>
-                        1.Якого розміру повинна бути собака ?
+                        1.Якого розміру собаку ви віддаєте перевагу?
                     </h2>
                     </div>
                 <div className="answer-area">
