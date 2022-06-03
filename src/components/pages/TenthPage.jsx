@@ -34,7 +34,7 @@ function EleventhPage() {
 
     function setAnswer(anwer){
         codeForDogs.child = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

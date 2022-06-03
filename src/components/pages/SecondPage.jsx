@@ -44,7 +44,7 @@ function SecondPage() {
 
     function setAnswer(anwer){
         codeForDogs.time = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

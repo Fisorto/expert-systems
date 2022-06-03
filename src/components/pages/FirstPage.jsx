@@ -43,7 +43,7 @@ function FirstPage() {
 
     function setAnswer(anwer){
         codeForDogs.size = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 

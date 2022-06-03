@@ -29,7 +29,7 @@ const withoutWoll = "a";
 const shortWoll = "b";
 const mediumWoll = "c";
 const longWoll = "d";
-const curlyWoll = "e";
+// const curlyWoll = "e";
 //Гучність
 const quietVolume = "a";
 const mediumVolume = "b";
@@ -52,7 +52,7 @@ export const codeForDogs = {
   goal : "",
   activity : "",
   wool :"",
-  loud : "",
+  volume : "",
   alergic : "",
   child : "",
   otherAnimal : "",
@@ -100,7 +100,7 @@ class Dogs{
     img:'',
   }); */
   
-  /* const testDog = new Dogs({
+  const testDog = new Dogs({
   
     size:"a",
     experience:"a",
@@ -109,8 +109,7 @@ class Dogs{
     goal:"a",
     activity :"a",
     wool:"a",
-    loud:"a",
-    yourHome:"a",
+    volume:"a",
     alergic:"a",
     child:"a",
     otherAnimal:"a",
@@ -119,7 +118,7 @@ class Dogs{
     number:1,
     name:'Sharik',
     img:'',
-  }); */
+  });
   const pug = new Dogs({
   
     size: smallSize,
@@ -244,7 +243,7 @@ class Dogs{
     wool: shortWoll,
     volume: mediumVolume ,
     alergic: noAlegric,
-    child: [yesChild,yesChild],
+    child: [yesChild,noChild],
     otherAnimal: [yesAnimal,noAnimal],
   
     id: 7,
@@ -347,9 +346,33 @@ class Dogs{
     name:'Бретонський Епаньоль',
     img:'',
   });
+  const arraySize = ["Маленька","Середня","Велика"]
+  const arrayTime = ["Півгодини на день", "Година на день", "Від години до двох годинь на день","Більше двох годин на день"]
+  const arrayExperience = ["Ні, це моя перша собака", "В мене є досвід долгяду за собакою","В мене великий досвід догляду за собакою"]
+  const arrayTraining = ["Базові навичики дресирування","Базові навички та додаткові часи дресирування", "Порода для якої потрібно багато часу для дресирування"]
+  const arrayGoal = ["Для охорони", "Для людини з вадами зору", "Просто як домашня тварина"]
+  const arrayActivity = ["Неспішні", "Середньої інтенсивності", "Активні"]
+  const arrayWool = ["Без шерсті", "Коротка","Cередня", "Довга", /* "Кучерява" */]
+  const arrayVolume = ["Тиха", "Cередня по гучності","Гучна"]
+  const arrayAlergic = ["Так", "Ні"]
+  const arrayChild = ["Так", "Ні"]
+  const arrayOtherAnimal = ["Так", "Ні"]
 
+  export const arrayOfStingProperties = [
+    arraySize, 
+    arrayTime, 
+    arrayExperience, 
+    arrayTraining,
+    arrayGoal,
+    arrayActivity,
+    arrayWool,
+    arrayVolume,
+    arrayAlergic,
+    arrayChild,
+    arrayOtherAnimal,
+   ];
   
-  const arrayOfDogs = [
+   export const arrayOfDogs = [
     pug,
     cockerSpaniel, 
     siberianHusky,
@@ -362,7 +385,12 @@ class Dogs{
     roughCollie,
     chowChow,
     bretonSpaniel,
-
+    testDog
    ];
 
   export default arrayOfDogs;
+
+
+  
+
+   

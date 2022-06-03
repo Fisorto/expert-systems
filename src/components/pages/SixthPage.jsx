@@ -40,7 +40,7 @@ function SixthPage() {
 
     function setAnswer(anwer){
         codeForDogs.activity = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
     

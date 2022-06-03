@@ -26,11 +26,11 @@ const woolAnswerArray = [
         code: "d",
         value: "Довга"      
     },
-    {
+    /* {
         id : "e7",
         code: "e",
         value: "Кучерява"      
-    },
+    }, */
 ]
 
 
@@ -49,7 +49,7 @@ function SeventhPage() {
 
     function setAnswer(anwer){
         codeForDogs.wool = anwer;
-        console.log(codeForDogs)
+        // console.log(codeForDogs)
         
     };
 
