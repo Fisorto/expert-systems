@@ -19,6 +19,16 @@ function theFidingDogs() {
     for(let i = 0; i < arrayOfDogs.length; i++ ) {
       let indexOfTrue = 0;
       for(let prop in arrayOfDogs[i]){
+        if(typeof arrayOfDogs[i][prop] === 'object'){
+          for(let j = 0; j < arrayOfDogs[i][prop].length; j++){
+            if(arrayOfDogs[i][prop][j] === codeForDogs[prop]){
+              indexOfTrue++;
+              /* console.log(`Перша точка:${arrayOfDogs[i][prop][j]}`) */
+              break;
+            } 
+          }
+        }
+        
         if(arrayOfDogs[i][prop] === codeForDogs[prop]){
           indexOfTrue++;
         } 
@@ -42,16 +52,22 @@ function theFidingDogs() {
       for (let prop in dog){
         
         if (prop !== "id" && prop !== "number" && prop !== "name" && prop !== "img"){
-          /* if(typeof dog[prop] === 'object'){
+            if(typeof dog[prop] === 'object'){
             for(let i = 0;i<dog[prop].length; i++){
               if(dog[prop][i] === "a"){
                 propertiesOfDog.push(properties[points][0])
-              }if(dog[prop][i] === "b"){
-                propertiesOfDog.push(properties[points][0])
               }
-              
+              if(dog[prop][i] === "b"){
+                propertiesOfDog.push(properties[points][1])
+              }
+              if(dog[prop][i] === "c"){
+                propertiesOfDog.push(properties[points][2])
+              }
+              if(dog[prop][i] === "d"){
+                propertiesOfDog.push(properties[points][3])
+              }
             }
-          } */
+          } 
           // console.log(arrayOfStingProperties[0][prop])
           // console.log(prop)
           if(dog[prop] === "a"){

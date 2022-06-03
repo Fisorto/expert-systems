@@ -15,36 +15,43 @@ const [arrayOfPerfectSelectedDogs, arrayOfExelentSelectedDogs, arrayOfGoodSelect
             <div className="result-page">
               <div className="result-area">
                 <h2>Ваш результат, це ось такий песик:</h2>
-                <div  >Ідеальні собаки:{
+                <div className='array-dogs-obj' >Ідеальні собаки:{
                   arrayOfPerfectSelectedDogs.map((comp)=>{
-                    return (<div key={comp.id}> <details>
+                    return (
+                    <div className='the-result-obj' key={comp.id}>
+                      <img src={comp.img} alt={comp.name}/>
+                      <details>
                       <summary>{comp.name}</summary>
                         {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
                           return(<div>{value}</div>
                         )})}
-                    </details> </div >) 
-                  })}</div >
+                      </details> 
+                    </div >) 
+                  })}
+                </div >
                   <div  >Майже ідеальні собаки:{
                   arrayOfExelentSelectedDogs.map((comp)=>{
-                    return (<div  key={comp.id}> <details>
+                    return (
+                    <div className='the-resul-obj' key={comp.id}><img src={comp.img} alt={comp.name}></img>
+                      <details>
                       <summary>{comp.name}</summary>
                         {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
-                          return(<div>{value}</div>
+                          return(<div key={comp.id}>{value}</div>
                         )})}
-                    </details> </div >) 
+                      </details> 
+                    </div >) 
                   })}</div >
                   <div  >Собаки які можливо підійдуть:{
                   arrayOfGoodSelectedDogs.map((comp)=>{
                     return (
-                    <div  key={comp.id}> 
-                    <div>
+                    <div  className='the-resul-obj' key={comp.id}>
+                      <img src={comp.img} alt={comp.name}></img>
                       <details>
                         <summary>{comp.name}</summary>
                           {recodingDogs(comp, arrayOfStingProperties).map((value)=>{
                             return(<div>{value}</div>
                           )})}
                       </details>
-                    </div> 
                     </div>) 
                   })}</div >
               </div>

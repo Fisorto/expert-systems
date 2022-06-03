@@ -1,0 +1,20 @@
+.result-area{
+
+    .array-dogs-obj{
+        display: flex;
+        flex-wrap: wrap;
+
+        .the-result-obj{
+            border: 1px solid black;
+            background-color: white;
+            margin:10px;
+
+            img{
+                height: 250px;
+                width: 250px;
+            }
+
+        }
+    }
+}
+    
