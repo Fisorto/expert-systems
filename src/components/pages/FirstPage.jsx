@@ -53,15 +53,15 @@ function FirstPage() {
 
                 <div className="question-area">
                     <h2>
-                        1.Якого розміру собаку ви віддаєте перевагу?
+                        1.Якого розміру повина бути собака?
                     </h2>
                     </div>
                 <div className="answer-area">
                     {sizeAnswerArray.map((prop)=>{
                         return(
-                        <div key={prop.id}>
-                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
-                            <label htmlFor={prop.id} >{prop.value}</label>
+                        <div  key={prop.id}>
+                            <input  id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label className='element-answer' htmlFor={prop.id} >{prop.value}</label>
                         </div>
                         );
                     }

@@ -56,8 +56,8 @@ function FourthPage() {
                 {trainingAnswerArray.map((prop)=>{
                         return(
                         <div key={prop.id}>
-                            <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
-                            <label htmlFor={prop.id}>{prop.value}</label>
+                            <input  id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
+                            <label className='element-answer' htmlFor={prop.id}>{prop.value}</label>
                         </div>
                         );
                     }

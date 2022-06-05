@@ -17,9 +17,23 @@
     }
     .answer-area{
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
         margin-top: 100px;
         font-size:20px;
+        .element-answer{
+            background-color: rgb(165, 158, 158);
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 2px;
+            display: inline-block;
+            min-width: 100px;
+            text-align: center;
+            &:hover{
+                cursor: pointer;
+            }
+        
+        }
 
     }
 
@@ -34,6 +48,9 @@
             button{
                 width: 98%;
                 height: 98%;
+                &:hover{
+                    cursor: pointer;
+                }
             }
 
         }

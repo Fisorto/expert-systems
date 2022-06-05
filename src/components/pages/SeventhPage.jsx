@@ -26,11 +26,6 @@ const woolAnswerArray = [
         code: "d",
         value: "Довга"      
     },
-    /* {
-        id : "e7",
-        code: "e",
-        value: "Кучерява"      
-    }, */
 ]
 
 
@@ -63,7 +58,7 @@ function SeventhPage() {
                         return(
                         <div key={prop.id}>
                             <input id={prop.id} name="first_question" type="radio"  onClick={()=>idChanger(prop.code)}/>
-                            <label htmlFor={prop.id}>{prop.value}</label>
+                            <label className='element-answer' htmlFor={prop.id}>{prop.value}</label>
                         </div>
                         );
                     }

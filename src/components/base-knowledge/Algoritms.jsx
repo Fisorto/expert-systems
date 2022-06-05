@@ -53,35 +53,76 @@ function theFidingDogs() {
         
         if (prop !== "id" && prop !== "number" && prop !== "name" && prop !== "img"){
             if(typeof dog[prop] === 'object'){
-            for(let i = 0;i<dog[prop].length; i++){
+            for(let i = 0;i < dog[prop].length; i++){
               if(dog[prop][i] === "a"){
-                propertiesOfDog.push(properties[points][0])
+                if(dog[prop][i] === codeForDogs[prop]){
+                  propertiesOfDog.push(`+ ${properties[points][0]}`)
+                } else if(dog[prop][i] !== codeForDogs[prop]){
+                  propertiesOfDog.push(`- ${properties[points][0]}`)
+                }
               }
               if(dog[prop][i] === "b"){
-                propertiesOfDog.push(properties[points][1])
+                if(dog[prop][i] === codeForDogs[prop]){
+                  propertiesOfDog.push(`+ ${properties[points][1]}`)
+                } else if(dog[prop][i] !== codeForDogs[prop]){
+                  propertiesOfDog.push(`- ${properties[points][1]}`)
+                }
               }
               if(dog[prop][i] === "c"){
-                propertiesOfDog.push(properties[points][2])
+                if(dog[prop][i] === codeForDogs[prop]){
+                  propertiesOfDog.push(`+ ${properties[points][2]}`)
+                } else if(dog[prop][i] !== codeForDogs[prop]){
+                  propertiesOfDog.push(`- ${properties[points][2]}`)
+                }
               }
               if(dog[prop][i] === "d"){
-                propertiesOfDog.push(properties[points][3])
+                if(dog[prop][i] === codeForDogs[prop]){
+                  propertiesOfDog.push(`+ ${properties[points][3]}`)
+                } else if(dog[prop][i] !== codeForDogs[prop]){
+                  propertiesOfDog.push(`- ${properties[points][3]}`)
+                }
               }
             }
           } 
           // console.log(arrayOfStingProperties[0][prop])
           // console.log(prop)
           if(dog[prop] === "a"){
-            propertiesOfDog.push(properties[points][0])
-            // console.log(properties[points])
+            /* propertiesOfDog.push(properties[points][0]) */
+            if(dog[prop] === codeForDogs[prop]){
+              propertiesOfDog.push(`+ ${properties[points][0]}`)
+            } else if(dog[prop] !== codeForDogs[prop]){
+              propertiesOfDog.push(`- ${properties[points][0]}`)
+            }
           } else if (dog[prop] === "b"){
-            propertiesOfDog.push(properties[points][1])
+            /* propertiesOfDog.push(properties[points][1]) */
+            if(dog[prop] === codeForDogs[prop]){
+              propertiesOfDog.push(`+ ${properties[points][1]}`)
+            } else if(dog[prop] !== codeForDogs[prop]){
+              propertiesOfDog.push(`- ${properties[points][1]}`)
+            }
           } else if (dog[prop] === "c"){
-            propertiesOfDog.push(properties[points][2])
+            /* propertiesOfDog.push(properties[points][2]) */
+            if(dog[prop] === codeForDogs[prop]){
+              propertiesOfDog.push(`+ ${properties[points][2]}`)
+            } else if(dog[prop] !== codeForDogs[prop]){
+              propertiesOfDog.push(`- ${properties[points][2]}`)
+            }
           } else if(dog[prop] === "d"){
-            propertiesOfDog.push(properties[points][3])
+            /* propertiesOfDog.push(properties[points][3]) */
+            if(dog[prop] === codeForDogs[prop]){
+              propertiesOfDog.push(`+ ${properties[points][3]}`)
+            } else if(dog[prop] !== codeForDogs[prop]){
+              propertiesOfDog.push(`- ${properties[points][3]}`)
+            }
           }
           points++;
         }
+
+        /* let numbr = 0
+        for (let props in codeForDogs) {
+          if ()
+          numbr++;
+        } */
       }
       // console.log(propertiesOfDog);
       return propertiesOfDog;

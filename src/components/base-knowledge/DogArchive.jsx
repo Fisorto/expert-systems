@@ -16,6 +16,8 @@ import Rottwel from "./img/Rottwel.png"
 import Shpiec from "./img/Shpiec.png"
 import SiberHusky from "./img/SiberHusky.png"
 import Bulter from "./img/Bulter.png"
+import Podle from "./img/Podle.png"
+import Shitzu from "./img/Shitzu.png"
 
 
 
@@ -52,7 +54,6 @@ const withoutWoll = "a";
 const shortWoll = "b";
 const mediumWoll = "c";
 const longWoll = "d";
-// const curlyWoll = "e";
 //Гучність
 const quietVolume = "a";
 const mediumVolume = "b";
@@ -484,238 +485,54 @@ class Dogs{
     img: GoldenRetr,
   });
 
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
+   const shihTzu = new Dogs({
+    size: smallSize,
+    time: fewTime,
+    experience: noExperience,
+    training: noTraining,
+    goal: justADogGoal,
+    activity: unhurriedActivity,
+    wool: longWoll,
+    volume: loudVolume,
+    alergic: [yesAlegric, noAlegric],
+    child: [yesChild,noChild],
+    otherAnimal: [yesAnimal,noAnimal],
   
     id: 19,
     number: 19,
-    name:'',
-    img:'',
-  }); */
+    name:'Ши тцу',
+    img: Shitzu,
+  }); 
 
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
+   const poodle = new Dogs({
+    size: bigSize,
+    time: hourThourTime,
+    experience: haveExperience,
+    training: haveTraining,
+    goal: justADogGoal,
+    activity: intensiveActivity,
+    wool: mediumWoll,
+    volume: loudVolume,
+    alergic:[yesAlegric, noAlegric],
+    child: [yesChild,noChild],
+    otherAnimal: [yesAnimal,noAnimal],
   
     id: 20,
     number: 20,
-    name:'',
-    img:'',
-  }); */
-
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 21,
-    number: 21,
-    name:'',
-    img:'',
-  }); */
-
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 22,
-    number: 22,
-    name:'',
-    img:'',
-  }); */
-
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 23,
-    number: 23,
-    name:'',
-    img:'',
-  }); */
-
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 24,
-    number: 24,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 25,
-    number: 25,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 26,
-    number: 26,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 27,
-    number: 27,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 28,
-    number: 28,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 29,
-    number: 29,
-    name:'',
-    img:'',
-  }); */
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id: 30,
-    number: 30,
-    name:'',
-    img:'',
-  }); */
+    name:'Пудель',
+    img: Podle,
+  }); 
 
 
-  const arraySize = ["Маленька","Середня","Велика"]
-  const arrayTime = ["Півгодини на день", "Година на день", "Від години до двох годинь на день","Більше двох годин на день"]
-  const arrayExperience = ["Ні, це моя перша собака", "В мене є досвід долгяду за собакою","В мене великий досвід догляду за собакою"]
-  const arrayTraining = ["Базові навичики дресирування","Базові навички та додаткові часи дресирування", "Порода для якої потрібно багато часу для дресирування"]
-  const arrayGoal = ["Для охорони", "Для людини з вадами зору", "Просто як домашня тварина"]
-  const arrayActivity = ["Неспішні", "Середньої інтенсивності", "Активні"]
-  const arrayWool = ["Без шерсті", "Коротка","Cередня", "Довга", /* "Кучерява" */]
+  const arraySize = ["Маленька собака","Середня собака","Велика собака"]
+  const arrayTime = ["Воліє гуляти півгодини на день", "Воліє гуляти годину на день", "Воліє гуляти від години до двох годинь на день"," Воліє гуляти більше двох годин на день"]
+  const arrayExperience = ["Підходить для людей без досвіду догляду за собаками", "Підходить для людей з досвідом догляду за собаками","Підходить для людей з великим досвідом догляду за собаками"]
+  const arrayTraining = ["Потрібні базові навичики дресирування","Потрібні базові навички та додаткові часи дресирування", "Порода для якої потрібно багато часу для дресирування"]
+  const arrayGoal = ["Підходить для охорони", "Підходить для людией з вадами зору", "Підходить просто як вихованець"]
+  const arrayActivity = ["Воліє до неспішних прогулянок", "Воліє до прогулянок середньої інтенсивності", "Воліє до активних прогулянок"]
+  const arrayWool = ["Без шерсті", "Коротка шерсть","Cередня шерсть", "Довга шерсть"]
   const arrayVolume = ["Тиха", "Cередня по гучності","Гучна"]
-  const arrayAlergic = ["Гіппоалергенна", "Негіппоалергенна"]
+  const arrayAlergic = ["Підходить для людей з алергією", "Підходить для людей без алергії"]
   const arrayChild = ["Підходить для людей з дітьми", "Підходить для людей без дітей"]
   const arrayOtherAnimal = ["Підходить для людей з іншими тваринами", "Підходить для людей у яких нема інших тварин"]
 
@@ -739,7 +556,7 @@ class Dogs{
     siberianHusky,
     mexicanHairless,
     rottweiler,
-    /*dachshund,
+    dachshund,
     labrador,
     frenchBulldog,
     dalmatian,
@@ -751,7 +568,9 @@ class Dogs{
     beagle,
     chihuahua,
     bullTerrier,
-    goldenRetriever, */
+    goldenRetriever,
+    shihTzu,
+    poodle
    ];
 
   export default arrayOfDogs;
