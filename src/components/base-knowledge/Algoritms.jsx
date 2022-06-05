@@ -1,16 +1,6 @@
 import {codeForDogs} from './DogArchive'
 import arrayOfDogs from './DogArchive'
 
-/* if(typeof arrayOfDogs[i][prop] === 'object'){
-  for(let j = 0; j < arrayOfDogs[i][prop].length; j++){
-    if(arrayOfDogs[i][prop][j] === codeForDogs[prop]){
-      indexOfTrue++;
-      console.log(`Перша точка:${arrayOfDogs[i][prop][j]}`)
-      break;
-    } 
-  }
-} */
-
 
 function theFidingDogs() {
     const arrayOfPerfectSelectedDogs = [];
@@ -23,7 +13,6 @@ function theFidingDogs() {
           for(let j = 0; j < arrayOfDogs[i][prop].length; j++){
             if(arrayOfDogs[i][prop][j] === codeForDogs[prop]){
               indexOfTrue++;
-              /* console.log(`Перша точка:${arrayOfDogs[i][prop][j]}`) */
               break;
             } 
           }
@@ -84,31 +73,25 @@ function theFidingDogs() {
               }
             }
           } 
-          // console.log(arrayOfStingProperties[0][prop])
-          // console.log(prop)
-          if(dog[prop] === "a"){
-            /* propertiesOfDog.push(properties[points][0]) */
+          if(dog[prop] === "a"){            
             if(dog[prop] === codeForDogs[prop]){
               propertiesOfDog.push(`+ ${properties[points][0]}`)
             } else if(dog[prop] !== codeForDogs[prop]){
               propertiesOfDog.push(`- ${properties[points][0]}`)
             }
-          } else if (dog[prop] === "b"){
-            /* propertiesOfDog.push(properties[points][1]) */
+          } else if (dog[prop] === "b"){           
             if(dog[prop] === codeForDogs[prop]){
               propertiesOfDog.push(`+ ${properties[points][1]}`)
             } else if(dog[prop] !== codeForDogs[prop]){
               propertiesOfDog.push(`- ${properties[points][1]}`)
             }
-          } else if (dog[prop] === "c"){
-            /* propertiesOfDog.push(properties[points][2]) */
+          } else if (dog[prop] === "c"){           
             if(dog[prop] === codeForDogs[prop]){
               propertiesOfDog.push(`+ ${properties[points][2]}`)
             } else if(dog[prop] !== codeForDogs[prop]){
               propertiesOfDog.push(`- ${properties[points][2]}`)
             }
-          } else if(dog[prop] === "d"){
-            /* propertiesOfDog.push(properties[points][3]) */
+          } else if(dog[prop] === "d"){            
             if(dog[prop] === codeForDogs[prop]){
               propertiesOfDog.push(`+ ${properties[points][3]}`)
             } else if(dog[prop] !== codeForDogs[prop]){
@@ -117,13 +100,7 @@ function theFidingDogs() {
           }
           points++;
         }
-
-        /* let numbr = 0
-        for (let props in codeForDogs) {
-          if ()
-          numbr++;
-        } */
-      }
-      // console.log(propertiesOfDog);
+        }
+      
       return propertiesOfDog;
     }
