@@ -105,44 +105,6 @@ class Dogs{
     }
   } 
   
-  /* const sampleDog = new Dogs({
-    size:,
-    time:,
-    experience:,
-    training:,
-    goal:,
-    activity:,
-    wool:,
-    volume:,
-    alergic:,
-    child:,
-    otherAnimal:,
-  
-    id:,
-    number:,
-    name:'',
-    img:'',
-  }); */
-  
-  /* const testDog = new Dogs({
-  
-    size:"a",
-    experience:"a",
-    time :"a",
-    training:"a",
-    goal:"a",
-    activity :"a",
-    wool:"a",
-    volume:"a",
-    alergic:"a",
-    child:"a",
-    otherAnimal:"a",
-  
-    id:1,
-    number:1,
-    name:'Sharik',
-    img:'',
-  }); */
   const pug = new Dogs({
   
     size: smallSize,
